@@ -5,7 +5,7 @@ metadata:
   labels:
     app: auth
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: auth
@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: auth
-          image: nasi101/auth
+          image: shaikhdocker/authservice:v1
           ports:
             - containerPort: 5000
           envFrom:
